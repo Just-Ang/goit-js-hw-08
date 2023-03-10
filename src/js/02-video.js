@@ -12,6 +12,6 @@ player.on('timeupdate', throttle(timeUpdate, 1000));
 const saveTime = localStorage.getItem('videoplayer-current-time');
 console.log(saveTime);
 const timeStop = JSON.parse(saveTime);
-console.log(timeStop.seconds);
+// console.log(timeStop.seconds);
 
-player.setCurrentTime(timeStop.seconds || 0);
+player.setCurrentTime(timeStop || 0);
