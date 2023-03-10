@@ -14,4 +14,12 @@ console.log(saveTime);
 const timeStop = JSON.parse(saveTime);
 // console.log(timeStop.seconds);
 
-player.setCurrentTime(timeStop || 0);
+
+function setTime () {
+  if (timeStop) {
+    player.setCurrentTime(timeStop.seconds);
+   } else player.setCurrentTime (0);
+}
+   setTime();
+
+// player.setCurrentTime(timeStop.seconds || 0);
